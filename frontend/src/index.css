@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Mystery+Quest&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Mystery+Quest&display=swap');
+
+:root {
+   --black: #000000;
+   --white: #fff;
+}
 
 *,
 ::after,
@@ -28,13 +33,40 @@ h6 {
    font-weight: 700;
 }
 
+p {
+   font-size: 12px;
+}
+
 code {
    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
+}
+
+/* a {
+   text-decoration: none;
+} */
+
+main {
+   min-height: calc(100vh - 160px);
 }
 
 .container {
    width: 90%;
    max-width: 1248px;
    margin: auto;
+}
+
+@media screen and (min-width: 768px) {
+   main {
+      min-height: calc(100vh - 200px);
+   }
+
+   p {
+      font-size: 16px;
+   }
+}
+@media screen and (min-width: 1024x) {
+   p {
+      font-size: 18px;
+   }
 }
