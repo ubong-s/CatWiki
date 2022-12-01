@@ -1,0 +1,15 @@
+.navbar {
+   height: 80px;
+   display: flex;
+   align-items: center;
+}
+
+.logo {
+   max-width: 128px;
+}
+
+@media screen and (min-width: 768px) {
+   .navbar {
+      height: 100px;
+   }
+}

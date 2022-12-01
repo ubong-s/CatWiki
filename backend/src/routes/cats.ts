@@ -25,7 +25,7 @@ catsRouter.get('/search', async (request, response) => {
       const data = await res.json();
 
       const filteredResults = data.filter((cat: CatProps) =>
-         cat.name.includes('be')
+         cat.name.toLowerCase().includes('be')
       );
 
       return response.status(200).json(filteredResults);
