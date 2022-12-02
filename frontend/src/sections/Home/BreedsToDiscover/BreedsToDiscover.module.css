@@ -63,17 +63,5 @@
 
    .heading > button {
       display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: transparent;
-      outline: none;
-      border: none;
-      text-transform: uppercase;
-      font-size: 18px;
-      color: var(--brown-light);
-   }
-
-   .heading > button > img {
-      width: 20px;
    }
 }

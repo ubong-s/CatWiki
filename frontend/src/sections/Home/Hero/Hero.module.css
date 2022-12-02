@@ -1,5 +1,5 @@
 .hero {
-   background-image: url('../../../public/assets/HeroImagesm.png');
+   background-image: url('../../../../public/assets/HeroImagesm.png');
    background-size: cover;
    background-repeat: no-repeat;
    border-top-left-radius: 46px;
@@ -62,7 +62,7 @@
 
 @media screen and (min-width: 768px) {
    .hero {
-      background-image: url('../../../public/assets/HeroImagemd.png');
+      background-image: url('../../../../public/assets/HeroImagemd.png');
       height: 270px;
    }
 
@@ -103,7 +103,7 @@
 
 @media screen and (min-width: 1024px) {
    .hero {
-      background-image: url('../../../public/assets/HeroImagelg.png');
+      background-image: url('../../../../public/assets/HeroImagelg.png');
       height: 540px;
       padding-left: 108px;
    }

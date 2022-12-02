@@ -1,6 +1,5 @@
-import { BreedsToDiscover } from './BreedsToDiscover';
 import { Footer } from './Footer';
-import { Hero } from './Hero';
+import { BreedsToDiscover, Hero, WhyHaveACat } from './Home';
 import { NavBar } from './Navbar';
 
-export { NavBar, Footer, Hero, BreedsToDiscover };
+export { NavBar, Footer, Hero, BreedsToDiscover, WhyHaveACat };

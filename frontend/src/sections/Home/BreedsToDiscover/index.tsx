@@ -12,7 +12,7 @@ export const BreedsToDiscover = () => {
 
             <div className={styles.heading}>
                <h2>66+ Breeds For you to discover</h2>
-               <button>
+               <button className='btn-with-icon'>
                   <span>See More</span>
                   <img src='/assets/arrow-right.svg' alt='arrow right' />
                </button>
