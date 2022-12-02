@@ -40,3 +40,11 @@ export interface CatProps {
    hypoallergenic: number;
    reference_image_id: string;
 }
+
+export interface PhotoProps {
+   breeds?: CatProps[];
+   id: string;
+   url: string;
+   width: number;
+   height: number;
+}
