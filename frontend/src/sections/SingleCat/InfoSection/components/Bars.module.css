@@ -1,0 +1,22 @@
+.bar,
+.fill {
+   height: 8px;
+   width: 50px;
+   border-radius: 8px;
+}
+
+.bar {
+   background: #e0e0e0;
+}
+
+.fill {
+   background: #544439;
+}
+
+@media screen and (min-width: 768px) {
+   .bar,
+   .fill {
+      height: 12px;
+      width: 60px;
+   }
+}

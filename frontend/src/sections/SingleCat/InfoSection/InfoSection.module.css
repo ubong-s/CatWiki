@@ -1,0 +1,42 @@
+.wrapper {
+   padding: 20px 0;
+}
+
+.wrapper img {
+   border-radius: 20px;
+   width: 100%;
+}
+
+.info {
+   display: grid;
+   gap: 1.5rem;
+   padding-top: 20px;
+}
+
+.info h1 {
+   font-size: 25px;
+   font-weight: 600;
+   line-height: 44px;
+   letter-spacing: 0em;
+   text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+   .info h1 {
+      font-size: 36px;
+   }
+}
+
+@media screen and (min-width: 1024px) {
+   .wrapper {
+      display: flex;
+      align-items: flex-start;
+      gap: 115px;
+      padding: 40px;
+   }
+
+   .info {
+      gap: 2rem;
+      padding-top: 0;
+   }
+}
