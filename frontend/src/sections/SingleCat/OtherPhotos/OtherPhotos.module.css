@@ -1,0 +1,48 @@
+.photos {
+   padding: 40px 0 80px;
+}
+
+.photos h2 {
+   font-size: 22px;
+   font-weight: 600;
+   line-height: 44px;
+   letter-spacing: 0em;
+   text-align: left;
+   margin-bottom: 40px;
+}
+
+.photogrid {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 16px;
+}
+
+.photogrid > img {
+   width: 100%;
+   border-radius: 20px;
+}
+
+@media screen and (min-width: 768px) {
+   .photos {
+      padding: 40px 0 100px;
+   }
+
+   .photogrid {
+      gap: 30px;
+   }
+
+   .photos h2 {
+      font-size: 36px;
+   }
+}
+
+@media screen and (min-width: 1024px) {
+   .photos {
+      padding: 40px 0 175px;
+   }
+
+   .photogrid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 46px;
+   }
+}

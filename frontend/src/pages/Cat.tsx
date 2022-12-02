@@ -1,3 +1,10 @@
+import { InfoSection, OtherPhotos } from '../sections';
+
 export const Cat = () => {
-   return <div>Cat</div>;
+   return (
+      <>
+         <InfoSection />
+         <OtherPhotos />
+      </>
+   );
 };
