@@ -3,7 +3,7 @@ import styles from './Footer.module.css';
 
 export const Footer = () => {
    return (
-      <footer className={styles.footer}>
+      <footer className={styles.footer} data-testid='footer'>
          <div className={`container ${styles.container}`}>
             <Link to='/'>
                <svg

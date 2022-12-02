@@ -1,0 +1,133 @@
+.hero {
+   background-image: url('../../../public/assets/HeroImagesm.png');
+   background-size: cover;
+   background-repeat: no-repeat;
+   border-top-left-radius: 46px;
+   border-top-right-radius: 46px;
+   height: 146px;
+   display: flex;
+   align-items: center;
+   padding: 0 30px;
+}
+
+.content {
+   width: 50%;
+   display: flex;
+   flex-direction: column;
+   justify-content: start;
+}
+
+.content > h1 {
+   font-family: 'Mystery Quest';
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 19px;
+   color: var(--white);
+}
+
+.content > h1 > img {
+   display: none;
+}
+
+.content p {
+   color: var(--white);
+   margin: 0.5rem 0 1rem;
+}
+
+.label {
+   position: relative;
+}
+
+.label > img {
+   position: absolute;
+   width: 15px;
+   height: 15px;
+   top: 50%;
+   right: 13px;
+   transform: translateY(-50%);
+}
+
+.label > input {
+   border-radius: 20px;
+   padding: 8px 13px;
+   width: 100%;
+   border: none;
+   outline: none;
+   font-size: 12px;
+}
+
+.tablet {
+   display: none;
+}
+
+@media screen and (min-width: 768px) {
+   .hero {
+      background-image: url('../../../public/assets/HeroImagemd.png');
+      height: 270px;
+   }
+
+   .content > h1 > span {
+      display: none;
+   }
+
+   .content > h1 > img {
+      display: initial;
+      width: 200px;
+   }
+
+   .content p {
+      margin: 1rem 0 2rem;
+      font-size: 18px;
+   }
+
+   .label > input {
+      border-radius: 25px;
+      padding: 18px;
+      font-size: 16px;
+   }
+
+   .label > img {
+      width: 18px;
+      height: 18px;
+      right: 18px;
+   }
+
+   .mobile {
+      display: none;
+   }
+
+   .tablet {
+      display: initial;
+   }
+}
+
+@media screen and (min-width: 1024px) {
+   .hero {
+      background-image: url('../../../public/assets/HeroImagelg.png');
+      height: 540px;
+      padding-left: 108px;
+   }
+
+   .content {
+      width: 40%;
+   }
+
+   .content > h1 > img {
+      width: 300px;
+   }
+
+   .content p {
+      margin: 16px 0 52px;
+      font-size: 24px;
+   }
+
+   .label > img {
+      right: 28px;
+   }
+
+   .label > input {
+      border-radius: 35px;
+      padding: 25px 28px;
+      font-size: 18px;
+   }
+}
