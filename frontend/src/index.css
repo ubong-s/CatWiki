@@ -65,6 +65,10 @@ code {
    text-decoration: none;
 } */
 
+ul {
+   list-style: none;
+}
+
 main {
    min-height: calc(100vh - 160px);
 }

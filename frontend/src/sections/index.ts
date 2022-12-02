@@ -1,3 +1,4 @@
+import { MostSearchedComp } from './MostSearched';
 import { Footer } from './Footer';
 import { BreedsToDiscover, Hero, WhyHaveACat } from './Home';
 import { NavBar } from './Navbar';
@@ -11,4 +12,5 @@ export {
    WhyHaveACat,
    InfoSection,
    OtherPhotos,
+   MostSearchedComp,
 };

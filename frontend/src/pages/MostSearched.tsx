@@ -1,3 +1,9 @@
+import { MostSearchedComp } from '../sections';
+
 export const MostSearched = () => {
-   return <div>MostSearched</div>;
+   return (
+      <>
+         <MostSearchedComp />
+      </>
+   );
 };
