@@ -4,6 +4,9 @@
    --black: #000000;
    --white: #fff;
    --gray: #e3e1dc;
+   --brown: #4d270c;
+   --brown-heading: #291507;
+   --brown-light: #29150799;
 }
 
 *,
@@ -22,6 +25,7 @@ body {
    -moz-osx-font-smoothing: grayscale;
    max-width: 1440px;
    margin: auto;
+   font-size: 12px;
 }
 
 h1,
@@ -38,9 +42,18 @@ p {
    font-size: 12px;
 }
 
+img {
+   max-width: 100%;
+}
+
 input {
    font-family: 'Montserrat', sans-serif;
    font-weight: 500;
+}
+
+button {
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 700;
 }
 
 code {
@@ -67,11 +80,14 @@ main {
       min-height: calc(100vh - 200px);
    }
 
+   body,
    p {
       font-size: 16px;
    }
 }
-@media screen and (min-width: 1024x) {
+
+@media screen and (min-width: 1024px) {
+   body,
    p {
       font-size: 18px;
    }
