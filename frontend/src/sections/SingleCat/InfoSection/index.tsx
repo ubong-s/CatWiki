@@ -1,41 +1,58 @@
+import { BreedProps } from '../../../types';
 import { AttributeBars } from './components/AttributeBars';
 import styles from './InfoSection.module.css';
 
-export const InfoSection = () => {
+export const InfoSection = ({ breed, photoURL }: BreedProps) => {
    return (
       <div className='container'>
-         <div className={styles.wrapper}>
-            <img src='/assets/CatWiki-sample.png' alt='' />
+         {breed && Object.keys(breed).length > 0 && (
+            <div className={styles.wrapper}>
+               <img src={photoURL} alt={breed.name} />
 
-            <div className={styles.info}>
-               <h1>Bengal</h1>
-               <p>
-                  Bengals are a lot of fun to live with, but they're definitely
-                  not the cat for everyone, or for first-time cat owners.
-                  Extremely intelligent, curious and active, they demand a lot
-                  of interaction and woe betide the owner who doesn't provide
-                  it.
-               </p>
-               <p>
-                  <strong>Temperament:</strong> Alert, Agile, Energetic,
-                  Demanding, Intelligent
-               </p>
-               <p>
-                  <strong>Origin:</strong> United States
-               </p>
-               <p>
-                  <strong>Life Span:</strong> 12 - 15 years
-               </p>
-               <AttributeBars attribute='Adaptability' rating={5} />
-               <AttributeBars attribute='Affection level' rating={5} />
-               <AttributeBars attribute='Child Friendly' rating={4} />
-               <AttributeBars attribute='Grooming' rating={1} />
-               <AttributeBars attribute='Intelligence' rating={5} />
-               <AttributeBars attribute='Health issues' rating={3} />
-               <AttributeBars attribute='Social needs' rating={5} />
-               <AttributeBars attribute='Stranger friendly' rating={3} />
+               <div className={styles.info}>
+                  <h1>{breed.name}</h1>
+                  <p>{breed.description}</p>
+                  <p>
+                     <strong>Temperament:</strong> {breed.temperament}
+                  </p>
+                  <p>
+                     <strong>Origin:</strong> {breed.origin}
+                  </p>
+                  <p>
+                     <strong>Life Span:</strong> {breed.life_span}
+                  </p>
+                  <AttributeBars
+                     attribute='Adaptability'
+                     rating={breed.adaptability}
+                  />
+                  <AttributeBars
+                     attribute='Affection level'
+                     rating={breed.affection_level}
+                  />
+                  <AttributeBars
+                     attribute='Child Friendly'
+                     rating={breed.child_friendly}
+                  />
+                  <AttributeBars attribute='Grooming' rating={breed.grooming} />
+                  <AttributeBars
+                     attribute='Intelligence'
+                     rating={breed.intelligence}
+                  />
+                  <AttributeBars
+                     attribute='Health issues'
+                     rating={breed.health_issues}
+                  />
+                  <AttributeBars
+                     attribute='Social needs'
+                     rating={breed.social_needs}
+                  />
+                  <AttributeBars
+                     attribute='Stranger friendly'
+                     rating={breed.stranger_friendly}
+                  />
+               </div>
             </div>
-         </div>
+         )}
       </div>
    );
 };

@@ -39,4 +39,10 @@
       gap: 2rem;
       padding-top: 0;
    }
+
+   .wrapper img {
+      width: 370px;
+      height: 370px;
+      object-fit: cover;
+   }
 }
