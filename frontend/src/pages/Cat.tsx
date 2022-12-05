@@ -1,6 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { InfoSection, OtherPhotos } from '../sections';
+import {
+   InfoLoadingSkeleton,
+   InfoSection,
+   OtherPhotos,
+   OtherPhotosSkeleton,
+} from '../sections';
 import catService from '../services/catService';
 import { StateProps } from '../types';
 
@@ -45,7 +50,12 @@ export const Cat = () => {
    }, []);
 
    if (state.loading) {
-      return <div>Loading...</div>;
+      return (
+         <>
+            <InfoLoadingSkeleton />
+            <OtherPhotosSkeleton />
+         </>
+      );
    }
 
    if (state.error.status) {

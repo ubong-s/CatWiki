@@ -1,0 +1,49 @@
+.photos {
+   padding: 40px 0 80px;
+}
+
+.h2 {
+   height: 40px;
+   width: 250px;
+   background-color: var(--gray-light);
+   border-radius: 5px;
+   margin-bottom: 2rem;
+}
+
+.photogrid {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 16px;
+}
+
+.photogrid > div {
+   width: 100%;
+   height: 150px;
+   border-radius: 20px;
+   background-color: var(--gray-light);
+}
+
+@media screen and (min-width: 768px) {
+   .photos {
+      padding: 40px 0 100px;
+   }
+
+   .photogrid {
+      gap: 30px;
+   }
+}
+
+@media screen and (min-width: 1024px) {
+   .photos {
+      padding: 40px 0 175px;
+   }
+
+   .photogrid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 46px;
+   }
+
+   .photogrid > div {
+      height: 278px;
+   }
+}
