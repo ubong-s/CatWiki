@@ -3,8 +3,11 @@
    margin-top: 12px;
 }
 
-.breed > img {
+.breed img {
    border-radius: 20px;
+   height: 134px;
+   width: 100%;
+   object-fit: cover;
 }
 
 @media screen and (min-width: 768px) {
@@ -17,5 +20,9 @@
 @media screen and (min-width: 768px) {
    .breed > h3 {
       font-size: 18px;
+   }
+
+   .breed img {
+      height: 220px;
    }
 }

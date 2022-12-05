@@ -4,6 +4,10 @@
    gap: 18px 13px;
 }
 
+.grid a {
+   color: var(--brown);
+}
+
 @media screen and (min-width: 768px) {
    .grid {
       grid-template-columns: repeat(4, 1fr);

@@ -3,6 +3,7 @@
    height: 8px;
    width: 50px;
    border-radius: 8px;
+   display: block;
 }
 
 .bar {

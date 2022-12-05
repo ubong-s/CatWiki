@@ -1,9 +1,10 @@
 import { MostSearchedComp } from '../sections';
+import { CatProps } from '../types';
 
-export const MostSearched = () => {
+export const MostSearched = ({ cats }: { cats: CatProps[] }) => {
    return (
       <>
-         <MostSearchedComp />
+         <MostSearchedComp cats={cats} />
       </>
    );
 };

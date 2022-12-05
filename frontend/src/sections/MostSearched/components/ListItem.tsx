@@ -1,22 +1,25 @@
+import { CatProps } from '../../../types';
 import styles from './ListItem.module.css';
 
 interface ListItemProps {
    index?: number;
+   cat?: CatProps;
 }
 
-export const ListItem = ({ index }: ListItemProps) => {
+export const ListItem = ({ index, cat }: ListItemProps) => {
    return (
-      <li className={styles.result}>
-         <img src='/assets/CatWiki-sample.png' alt='' />
-         <div>
-            <h3>1. Bengal</h3>
-            <p>
-               Bengals are a lot of fun to live with, but they're definitely not
-               the cat for everyone, or for first-time cat owners. Extremely
-               intelligent, curious and active, they demand a lot of interaction
-               and woe betide the owner who doesn't provide it.
-            </p>
-         </div>
-      </li>
+      <>
+         {cat && (
+            <li className={styles.result}>
+               <img src={cat.image?.url} alt={cat.name} />
+               <div>
+                  <h3>
+                     {index}. {cat.name}
+                  </h3>
+                  <p>{cat?.description}</p>
+               </div>
+            </li>
+         )}
+      </>
    );
 };

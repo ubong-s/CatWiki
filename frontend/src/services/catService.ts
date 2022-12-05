@@ -6,6 +6,18 @@ const fetchSingleCat = async (id?: string) => {
    return { status: response.status, data: response.data };
 };
 
-const catService = { fetchSingleCat };
+const mostSearchedCats = async () => {
+   const response = await axios.get(`${baseURL}`);
+   return { status: response.status, data: response.data };
+};
+
+const searchCats = async (value: string) => {
+   const response = await axios.post(`${baseURL}/search`, {
+      query: value,
+   });
+   return { status: response.status, data: response.data };
+};
+
+const catService = { fetchSingleCat, mostSearchedCats, searchCats };
 
 export default catService;

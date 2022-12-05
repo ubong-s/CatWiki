@@ -3,8 +3,6 @@ import { AttributeBars } from './components/AttributeBars';
 import styles from './InfoSection.module.css';
 
 export const InfoSection = ({ breed, photoURL }: BreedProps) => {
-   console.log(breed);
-
    return (
       <div className='container'>
          {breed && Object.keys(breed).length > 0 && (

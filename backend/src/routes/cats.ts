@@ -2,6 +2,7 @@ import express from 'express';
 import fetch from 'node-fetch';
 import { CatProps, PhotoProps } from '../types';
 import config from '../utils/config';
+import helpers from '../utils/helpers';
 
 const catsRouter = express.Router();
 
@@ -12,7 +13,7 @@ catsRouter.get('/', async (_request, response) => {
       );
       const data = await res.json();
 
-      return response.status(200).json(data);
+      return response.status(200).json(helpers.shuffleCats(data));
    } catch (error) {
       return response.status(400).json({ error: 'Error fectching' });
    }
@@ -54,15 +55,17 @@ catsRouter.get('/:id', async (request, response) => {
    }
 });
 
-catsRouter.get('/search', async (request, response) => {
-   const { body } = request;
+catsRouter.post('/search', async (request, response) => {
+   const {
+      body: { query },
+   } = request;
 
    try {
       const res = await fetch(`${config.BASE_API_URL}/breeds` as string);
       const data = await res.json();
 
       const filteredResults = data.filter((cat: CatProps) =>
-         cat.name.toLowerCase().includes('be')
+         cat.name.toLowerCase().includes(query.toLowerCase())
       );
 
       return response.status(200).json(filteredResults);

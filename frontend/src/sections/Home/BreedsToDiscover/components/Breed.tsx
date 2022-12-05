@@ -1,15 +1,19 @@
+import { Link } from 'react-router-dom';
 import styles from './Breed.module.css';
 
 interface BreedProps {
-   name: string;
-   imageURL: string;
+   name?: string;
+   imageURL?: string;
+   id?: string;
 }
 
-export const Breed = ({ name, imageURL }: BreedProps) => {
+export const Breed = ({ name, imageURL, id }: BreedProps) => {
    return (
-      <div className={styles.breed}>
-         <img src={imageURL} alt={name} />
-         <h3>{name}</h3>
-      </div>
+      <Link to={`/cat/${id}`}>
+         <div className={styles.breed}>
+            <img src={imageURL} alt={name} />
+            <h3>{name}</h3>
+         </div>
+      </Link>
    );
 };

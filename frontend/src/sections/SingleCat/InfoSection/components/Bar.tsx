@@ -5,5 +5,5 @@ interface BarProps {
 }
 
 export const Bar = ({ fill }: BarProps) => {
-   return <div className={fill ? styles.fill : styles.bar}></div>;
+   return <span className={fill ? styles.fill : styles.bar}></span>;
 };
