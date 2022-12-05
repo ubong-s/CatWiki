@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import {
+   Error,
    InfoLoadingSkeleton,
    InfoSection,
    OtherPhotos,
@@ -33,16 +34,14 @@ export const Cat = () => {
                data,
             });
          }
-      } catch (error) {
+      } catch (error: any) {
          setState({
             ...state,
             loading: false,
-            error: { status: true, message: 'Error fetching data' },
+            error: { status: true, message: error.response.data.error },
          });
       }
    };
-
-   console.log(state);
 
    useEffect(() => {
       fetchCatData();
@@ -59,7 +58,7 @@ export const Cat = () => {
    }
 
    if (state.error.status) {
-      return <div>{state.error.message}</div>;
+      return <Error message={state.error.message} />;
    }
 
    return (

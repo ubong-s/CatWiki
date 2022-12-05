@@ -1,7 +1,7 @@
 import styles from './Bars.module.css';
 
 interface BarProps {
-   fill?: boolean;
+   fill?: 'true';
 }
 
 export const Bar = ({ fill }: BarProps) => {

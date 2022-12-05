@@ -8,6 +8,8 @@ import {
    OtherPhotos,
    OtherPhotosSkeleton,
 } from './SingleCat';
+import { Error } from '../shared';
+
 export {
    NavBar,
    Footer,
@@ -19,4 +21,5 @@ export {
    InfoLoadingSkeleton,
    OtherPhotosSkeleton,
    MostSearchedComp,
+   Error,
 };

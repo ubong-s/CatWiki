@@ -12,10 +12,15 @@ export const WhyHaveACat = () => {
                   calming chemicals in your body which lower your stress and
                   anxiety leves
                </p>
-               <button className='btn-with-icon'>
+               <a
+                  href='https://www.helpguide.org/articles/healthy-living/joys-of-owning-a-cat.htm#:~:text=Owning%20a%20cat%20can%20bring,be%20an%20extremely%20rewarding%20relationship.'
+                  target='_blank'
+                  rel='noreferrer noopener'
+                  className='btn-with-icon'
+               >
                   <span>Read More</span>
                   <img src='/assets/arrow-right.svg' alt='arrow right' />
-               </button>
+               </a>
             </div>
             <div className={styles.images}>
                <div>

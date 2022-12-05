@@ -11,7 +11,7 @@ export const AttributeBars = ({ attribute, rating }: AttributeBarsProps) => {
       const number = index + 0.5;
       return (
          <span key={index}>
-            {rating > number ? <Bar fill={true} /> : <Bar />}
+            {rating > number ? <Bar fill='true' /> : <Bar />}
          </span>
       );
    });

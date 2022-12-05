@@ -36,6 +36,10 @@
    .photos h2 {
       font-size: 36px;
    }
+
+   .photogrid > img {
+      height: 200px;
+   }
 }
 
 @media screen and (min-width: 1024px) {

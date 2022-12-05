@@ -5,6 +5,8 @@
 .wrapper img {
    border-radius: 20px;
    width: 100%;
+   max-height: 250px;
+   object-fit: cover;
 }
 
 .info {
@@ -22,6 +24,10 @@
 }
 
 @media screen and (min-width: 768px) {
+   .wrapper img {
+      max-height: 400px;
+   }
+
    .info h1 {
       font-size: 36px;
    }
