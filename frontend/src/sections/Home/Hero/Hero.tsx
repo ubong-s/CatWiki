@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, useCallback, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import catService from '../../../services/catService';
 import { CatProps } from '../../../types';
@@ -13,13 +13,6 @@ export const Hero = () => {
    const handleChange = async (e: ChangeEvent<HTMLInputElement>) => {
       let value = e.target.value;
       setSearch(value);
-      try {
-         const { status, data } = await catService.searchCats(search);
-
-         if (status === 200) {
-            setResults(data);
-         }
-      } catch (error) {}
    };
 
    const toggleMobileSearch = () => {
@@ -30,6 +23,24 @@ export const Hero = () => {
       setSearchOpen(false);
       setSearch('');
    };
+
+   const fetchCats = useCallback(async () => {
+      try {
+         const { status, data } = await catService.searchCats(search);
+
+         if (status === 200) {
+            setResults(data);
+         }
+      } catch (error) {
+         console.log(error);
+      }
+   }, [search]);
+
+   useEffect(() => {
+      if (search) {
+         fetchCats();
+      }
+   }, [search, fetchCats]);
 
    return (
       <div className='container'>

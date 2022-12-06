@@ -45,7 +45,7 @@ function App() {
 
    useEffect(() => {
       fetchCats();
-   }, []);
+   }, []); //eslint-disable-line
 
    return (
       <Router>
