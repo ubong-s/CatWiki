@@ -34,7 +34,7 @@
    margin: 0.5rem 0 1rem;
 }
 
-.content form {
+.content .formWrap {
    position: relative;
 }
 
@@ -49,35 +49,51 @@
    display: none;
 }
 
-.content .results p {
+.results p {
    text-align: center;
    color: var(--brown);
    margin-bottom: 0.75rem;
+   font-size: 16px !important;
 }
 
-.content ul {
+.results ul {
    width: 100%;
    padding: 12px;
-   max-height: 200px;
+   max-height: 190px;
    overflow-y: auto;
 }
 
-.content ul li {
+.results ul::-webkit-scrollbar {
+   width: 0.25em;
+}
+
+.results ul::-webkit-scrollbar-track {
+   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.results ul::-webkit-scrollbar-thumb {
+   background-color: darkgrey;
+   border-radius: 10px;
+   /* outline: 1px solid slategrey; */
+}
+
+.results ul li {
    padding: 16px;
    border-radius: 10px;
    transition: 0.3s background-color ease-in-out;
 }
 
-.content ul li:hover {
+.results ul li:hover {
    background-color: var(--gray);
 }
 
-.content ul li a {
+.results ul li a {
    padding: 16px;
    width: 100%;
    height: 100%;
    display: inline-block;
    padding: 0;
+   color: var(--black);
 }
 
 .label {
@@ -93,13 +109,15 @@
    transform: translateY(-50%);
 }
 
-.label > input {
+.label > input,
+.label > button {
    border-radius: 20px;
    padding: 8px 13px;
    width: 100%;
    border: none;
    outline: none;
    font-size: 12px;
+   text-align: left;
 }
 
 .tablet {

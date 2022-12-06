@@ -1,0 +1,92 @@
+.mobileSearch {
+   position: fixed;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   background-color: #ffffff;
+   overflow: hidden;
+   padding: 20px 0;
+
+   gap: 1rem;
+}
+
+.close {
+   display: flex;
+   justify-content: end;
+   margin-bottom: 1rem;
+}
+
+.close > button {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 40px;
+   height: 40px;
+   border-radius: 5px;
+   border: none;
+   outline: none;
+   background-color: var(--gray);
+   padding: 0;
+}
+
+.close > button > img {
+   padding: 0;
+   margin: 0;
+   width: 15px;
+   height: 15px;
+}
+
+.label {
+   position: relative;
+}
+
+.label > img {
+   position: absolute;
+   width: 15px;
+   height: 15px;
+   top: 50%;
+   right: 13px;
+   transform: translateY(-50%);
+}
+
+.label > input {
+   border-radius: 20px;
+   padding: 11px 20px;
+   width: 100%;
+   border: 1px solid var(--black);
+   outline: none;
+   font-size: 12px;
+}
+
+.mobileResults {
+   padding-top: 20px;
+}
+
+.mobileResults ul li {
+   padding: 16px;
+   border-radius: 10px;
+   transition: 0.3s background-color ease-in-out;
+}
+
+.mobileResults ul li:hover {
+   background-color: var(--gray);
+}
+
+.mobileResults ul li a {
+   width: 100%;
+   height: 100%;
+   display: inline-block;
+   padding: 0;
+   color: var(--black);
+}
+
+.mobileResults p {
+   color: var(--black);
+}
+
+@media screen and (min-width: 768px) {
+   .mobileResults {
+      display: none;
+   }
+}

@@ -51,7 +51,7 @@ catsRouter.get('/:id', async (request, response) => {
          return response.status(200).json({ breed, photos: mappedPhotos });
       }
    } catch (error) {
-      return response.status(400).json({ error: 'Error fectching' });
+      return response.status(400).json({ error: 'Error fetching' });
    }
 });
 
