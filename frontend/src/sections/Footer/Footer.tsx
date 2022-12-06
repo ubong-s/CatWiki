@@ -53,7 +53,15 @@ export const Footer = () => {
                >
                   Ubong Sylvester
                </a>{' '}
-               - devChallenge.io 2021
+               -{' '}
+               <a
+                  href='https://devchallenges.io/'
+                  target='_blank'
+                  rel='noreferrer noopener'
+               >
+                  devChallenges.io
+               </a>{' '}
+               2021
             </p>
          </div>
       </footer>
