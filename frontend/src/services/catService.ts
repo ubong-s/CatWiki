@@ -1,5 +1,8 @@
 import axios from 'axios';
-const baseURL = process.env.REACT_APP_SERVER_URL;
+const baseURL =
+   process.env.NODE_ENV === 'development'
+      ? process.env.REACT_APP_LOCAL_SERVER_URL
+      : process.env.REACT_APP_LIVE_SERVER_URL;
 
 const fetchSingleCat = async (id?: string) => {
    const response = await axios.get(`${baseURL}/${id}`);
