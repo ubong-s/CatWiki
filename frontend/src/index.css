@@ -102,6 +102,28 @@ a {
    width: 20px;
 }
 
+.not-found {
+   display: flex;
+   gap: 1.5rem;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   height: 70vh;
+}
+
+.not-found h2 {
+   font-size: 4rem;
+}
+
+.not-found button {
+   background-color: var(--black);
+   color: var(--white);
+   padding: 1rem 2rem;
+   border: none;
+   border-radius: 5px;
+   text-transform: uppercase;
+}
+
 @media screen and (min-width: 768px) {
    main {
       min-height: calc(100vh - 200px);
